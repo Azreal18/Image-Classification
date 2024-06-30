@@ -62,6 +62,7 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
 
 3. **Install Dependencies**:
 
+
 Install the required Python packages using requirements.txt:
     ```bash
     pip install -r requirements.txt
@@ -69,7 +70,7 @@ Install the required Python packages using requirements.txt:
 
 4. **Prepare Data**:
 
-Place your image data in the data directory. The data should be organized into subfolders, one for each category (e.g., Building, Forest, etc.).
+    Place your image data in the data directory. The data should be organized into subfolders, one for each category (e.g., Building, Forest, etc.).
 
 5.**Train the Model**:
 
@@ -80,7 +81,9 @@ If you haven't already trained the model, run the model training script:
 This will generate the svm_classifier.pkl and pca_model.pkl files needed for the Flask application.
 
 ## Running the Application
+
 1. **Run the Flask App**:
+
 Start the Flask server by executing:
     ```bash
     python app.py
