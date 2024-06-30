@@ -147,6 +147,10 @@ You can customize or extend these steps by editing the `model_training.py` file.
 
 ## Future Enhancements
 
+### FAQ
+The current model, trained on grayscale images using an SVM classifier, achieves an accuracy of 59%. To enhance the model's performance, a future plan is to train a model utilizing color histograms. This approach was not implemented in the current version due to the extended training time and infrastructure constraints.
+Also explore Different Algorithms with more time and compute power.
+
 ### Optimization:
 
 - **Explore techniques for optimizing SVM parameters** (e.g., C, gamma):
