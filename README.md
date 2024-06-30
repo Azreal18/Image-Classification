@@ -82,7 +82,7 @@ This will generate the svm_classifier.pkl and pca_model.pkl files needed for the
 
 1. **Run the Flask App**:
 
-Start the Flask server by executing:
+    Start the Flask server by executing:
     ```bash
     python app.py
 
