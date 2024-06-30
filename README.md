@@ -59,11 +59,8 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-
 3. **Install Dependencies**:
-
-
-Install the required Python packages using requirements.txt:
+    Install the required Python packages using requirements.txt:
     ```bash
     pip install -r requirements.txt
 
@@ -72,11 +69,12 @@ Install the required Python packages using requirements.txt:
 
     Place your image data in the data directory. The data should be organized into subfolders, one for each category (e.g., Building, Forest, etc.).
 
-5.**Train the Model**:
+5. **Train the Model**:
 
-If you haven't already trained the model, run the model training script:
+    If you haven't already trained the model, run the model training script:
     ```bash
     python svm_classifier_training.py
+    ```
 
 This will generate the svm_classifier.pkl and pca_model.pkl files needed for the Flask application.
 
