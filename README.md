@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates an image classification system using handcrafted features and shallow learning models. It includes a Flask web application that allows users to upload images and get classification results based on a trained Support Vector Machine (SVM) model. 
+This project demonstrates an image classification system using handcrafted features and shallow learning models. It includes a Flask web application that allows users to upload images and get classification results based on a trained Support Vector Machine (SVM) model.
 
 The application uses handcrafted features such as Histogram of Oriented Gradients (HOG) and Canny edge detection for image classification.
 
@@ -10,8 +10,8 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
 
 1. [Project Structure](#project-structure)
 2. [Setup Instructions](#setup-instructions)
-    - [Pre-requisites](#pre-requisites)
-    - [Installation](#installation)
+   - [Pre-requisites](#pre-requisites)
+   - [Installation](#installation)
 3. [Running the Application](#running-the-application)
 4. [Usage](#usage)
 5. [Model Training and Evaluation](#model-training-and-evaluation)
@@ -35,9 +35,6 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
 ├── requirements.txt # Required Python packages
 └── README.md # Project documentation
 
-
-
-
 ## Setup Instructions
 
 ### Pre-requisites
@@ -47,34 +44,38 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
 
 ### Installation
 
-1. **Clone the Repository**: 
+1. **Clone the Repository**:
 
    ```bash
    git clone https://github.com/your-username/image-classification-flask-app.git
    cd image-classification-flask-app
 
+   ```
 2. **Create a Virtual Environment (recommended)**:
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
+   ```
 3. **Install Dependencies**:
-    Install the required Python packages using requirements.txt:
-    ```bash
-    pip install -r requirements.txt
+   Install the required Python packages using requirements.txt:
+
+   ```bash
+   pip install -r requirements.txt
 
 
+   ```
 4. **Prepare Data**:
 
-    Place your image data in the data directory. The data should be organized into subfolders, one for each category (e.g., Building, Forest, etc.).
-
+   Place your image data in the data directory. The data should be organized into subfolders, one for each category (e.g., Building, Forest, etc.).
 5. **Train the Model**:
 
-    If you haven't already trained the model, run the model training script:
-    ```bash
-    python svm_classifier_training.py
-    ```
+   If you haven't already trained the model, run the model training script:
+
+   ```bash
+   python svm_classifier_training.py
+   ```
 
 This will generate the svm_classifier.pkl and pca_model.pkl files needed for the Flask application.
 
@@ -82,10 +83,12 @@ This will generate the svm_classifier.pkl and pca_model.pkl files needed for the
 
 1. **Run the Flask App**:
 
-    Start the Flask server by executing:
-    ```bash
-    python app.py
+   Start the Flask server by executing:
 
+   ```bash
+   python app.py
+
+   ```
 2. **Access the Web Application**:
 
 Open your web browser and navigate to http://127.0.0.1:5000/. You should see the image upload interface of the Flask application.
@@ -109,21 +112,23 @@ The `model_training.py` script handles the entire process of loading and preproc
 ### Load and Preprocess Images:
 
 1. **Resize to (300, 300) pixels**:
-   - Standardizes the input image size for consistency.
 
+   - Standardizes the input image size for consistency.
 2. **Convert to grayscale and normalize**:
+
    - Converts images to grayscale, which simplifies processing.
    - Normalizes pixel values to the range [0, 1].
-
 3. **Apply histogram equalization**:
+
    - Enhances contrast by spreading out the intensity values.
 
 ### Extract Features:
 
 1. **HOG (Histogram of Oriented Gradients)**:
-   - Captures edge or gradient structure that is useful for object detection.
 
+   - Captures edge or gradient structure that is useful for object detection.
 2. **Canny Edge Detection**:
+
    - Detects edges in the image, which can highlight important structures.
 
 ### Dimensionality Reduction:
@@ -146,21 +151,23 @@ The `model_training.py` script handles the entire process of loading and preproc
 You can customize or extend these steps by editing the `model_training.py` file.
 
 2. **Evaluation Results**:
-|           | precision | recall | f1-score | support |
-|-----------|-----------|--------|----------|---------|
-| Class 1   | 0.60      | 0.59   | 0.60     | 118     |
-| Class 2   | 0.87      | 0.86   | 0.86     | 99      |
-| Class 3   | 0.38      | 0.44   | 0.41     | 96      |
-| Class 4   | 0.56      | 0.52   | 0.54     | 101     |
-| Class 5   | 0.54      | 0.56   | 0.55     | 91      |
-| Class 6   | 0.65      | 0.58   | 0.61     | 95      |
-| accuracy  |          |        | 0.59     | 600     |
-| macro avg | 0.60      | 0.59   | 0.59     | 600     |
-| weighted avg | 0.60  | 0.59   | 0.60     | 600     |
+
+   |              | precision | recall | f1-score | support |
+   | -------------- | ----------- | -------- | ---------- | --------- |
+   | Class 1      | 0.60      | 0.59   | 0.60     | 118     |
+   | Class 2      | 0.87      | 0.86   | 0.86     | 99      |
+   | Class 3      | 0.38      | 0.44   | 0.41     | 96      |
+   | Class 4      | 0.56      | 0.52   | 0.54     | 101     |
+   | Class 5      | 0.54      | 0.56   | 0.55     | 91      |
+   | Class 6      | 0.65      | 0.58   | 0.61     | 95      |
+   | accuracy     |           |        | 0.59     | 600     |
+   | macro avg    | 0.60      | 0.59   | 0.59     | 600     |
+   | weighted avg | 0.60      | 0.59   | 0.60     | 600     |
 
 ## Future Enhancements
 
 ### FAQ
+
 The current model, trained on grayscale images using an SVM classifier, achieves an accuracy of 59%. To enhance the model's performance, a future plan is to train a model utilizing color histograms. This approach was not implemented in the current version due to the extended training time and infrastructure constraints.
 Also explore Different Algorithms with more time and compute power.
 
@@ -187,4 +194,4 @@ Also explore Different Algorithms with more time and compute power.
 ### Deep Learning:
 
 - **Consider using deep learning-based feature extraction methods for potentially more discriminative features**:
-  - Techniques like convolutional neural networks (CNNs) can automatically learn complex features from images, which might 
+  - Techniques like convolutional neural networks (CNNs) can automatically learn complex features from images, which might
