@@ -146,17 +146,17 @@ The `model_training.py` script handles the entire process of loading and preproc
 You can customize or extend these steps by editing the `model_training.py` file.
 
 2. **Evaluation Results**:
-|           | **precision** | **recall** | **f1-score** | **support** |
-|-----------|---------------|------------|--------------|-------------|
-| **Class 1** | 0.60          | 0.59       | 0.60         | 118         |
-| **Class 2** | 0.87          | 0.86       | 0.86         | 99          |
-| **Class 3** | 0.38          | 0.44       | 0.41         | 96          |
-| **Class 4** | 0.56          | 0.52       | 0.54         | 101         |
-| **Class 5** | 0.54          | 0.56       | 0.55         | 91          |
-| **Class 6** | 0.65          | 0.58       | 0.61         | 95          |
-| **accuracy** |             |            | 0.59         | 600         |
-| **macro avg** | 0.60       | 0.59       | 0.59         | 600         |
-| **weighted avg** | 0.60   | 0.59       | 0.60         | 600         |
+|           | precision | recall | f1-score | support |
+|-----------|-----------|--------|----------|---------|
+| Class 1   | 0.60      | 0.59   | 0.60     | 118     |
+| Class 2   | 0.87      | 0.86   | 0.86     | 99      |
+| Class 3   | 0.38      | 0.44   | 0.41     | 96      |
+| Class 4   | 0.56      | 0.52   | 0.54     | 101     |
+| Class 5   | 0.54      | 0.56   | 0.55     | 91      |
+| Class 6   | 0.65      | 0.58   | 0.61     | 95      |
+| accuracy  |          |        | 0.59     | 600     |
+| macro avg | 0.60      | 0.59   | 0.59     | 600     |
+| weighted avg | 0.60  | 0.59   | 0.60     | 600     |
 
 ## Future Enhancements
 
