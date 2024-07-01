@@ -19,21 +19,25 @@ The application uses handcrafted features such as Histogram of Oriented Gradient
 7. [License](#license)
 
 ## Project Structure
-
+```
 ├── main.py # Flask application entry point
 ├── data # Directory containing image data
-│ ├── Building
-│ ├── Forest
-│ ├── Glacier
-│ ├── Mountains
-│ ├── Sea
-│ └── Streets
+│   ├── Building
+│   ├── Forest
+│   ├── Glacier
+│   ├── Mountains
+│   ├── Sea
+│   └── Streets
 ├── index.html # HTML template for the web application
 ├── svm_classifier.ipynb # Python script for training the SVM model
 ├── pca_model.pkl # PCA model file
 ├── svm_classifier.pkl # Trained SVM model file
 ├── requirements.txt # Required Python packages
+├── dimensionality reduction.md # Explaination on dimensionality reduction why it was used and process
+├── Image_processing.md # Explaination on steps taken for image pre-processing
+├── Feature_selection.md # Explaination on steps taken for feature selection 
 └── README.md # Project documentation
+```
 
 ## Setup Instructions
 
